@@ -1,0 +1,354 @@
+:root {
+  --primary: #db710d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  background: #000;
+  min-height: 1000vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #000;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+  box-shadow: 0px 30px 28px #000;
+  border-bottom: solid var(--primary) 2px;
+}
+
+.header h1 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.header h1 span {
+  color: var(--primary);
+}
+
+.nav .nav-list {
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.nav .nav-list li {
+  display: flex;
+  list-style: none;
+}
+
+.nav .nav-list li a {
+  font-weight: 400;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0;
+  margin: 0 15px;
+}
+
+.nav-icon {
+  display: none;
+}
+
+.nav-icon a {
+  margin: 0 5px;
+  color: #fff;
+}
+
+.nav-icon a svg {
+  width: 20px;
+}
+
+.side-nav {
+  width: 130px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  padding-top: 60px;
+  align-items: right;
+  background-color: #ffffff;
+  transition: right 0.3s;
+  z-index: 1;
+  border-left: solid 1px #000;
+}
+
+.side-nav.active {
+  right: 0px;
+}
+
+.nav-list-side {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-list-side li {
+  margin: 20px 15px;
+}
+
+.nav-list-side li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* home */
+.home {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  background-image: url(/assets/img/moritz-knoringer-5QR63diGK5o-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.home-content {
+  color: #fff;
+  padding: 20px 50px;
+}
+
+.home-content h2 {
+  font-size: 2.8rem;
+  text-shadow: -5px 5px 10px #000;
+  line-height: 30px;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  text-shadow: -5px 5px 10px #000;
+  font-style: italic;
+}
+
+.home-content h1 span {
+  color: var(--primary);
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.home-content a {
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--primary);
+  padding: 10px 30px;
+  box-shadow: 0 0 10px #000;
+}
+
+.about {
+  padding: 10rem 8% 1.4rem;
+}
+
+.about .about-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .about-container .about-content {
+  margin-right: 50px;
+}
+
+.about .about-container .about-content h2 {
+  font-size: 3.8rem;
+  margin-bottom: 5px;
+  color: #fff;
+  font-style: italic;
+  padding-bottom: 10px;
+  border-bottom: solid 1px var(--primary);
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.about .about-container .about-content p {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 300;
+  line-height: 40px;
+}
+
+.about .about-container .about-img {
+  position: relative;
+  box-shadow: 0 0 20px #000;
+}
+
+.about .about-container .about-img::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -25px;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/img/mr-autthaporn-pradidpong-EZt7OJagHyY-unsplash.jpg"); /* Ganti dengan path gambar latar belakang yang diinginkan */
+  background-repeat: no-repeat;
+  background-size: cover; /* Sesuaikan dengan kebutuhan desain */
+  opacity: 1; /* Sesuaikan dengan tingkat opasitas yang diinginkan */
+  z-index: -1;
+  transition: 0.2s;
+}
+
+.about .about-container .about-img::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/img/nafinia-putra-Kwdp-0pok-I-unsplash.jpg"); /* Ganti dengan path gambar latar belakang yang diinginkan */
+  background-repeat: no-repeat;
+  background-size: cover; /* Sesuaikan dengan kebutuhan desain */
+  opacity: 1; /* Sesuaikan dengan tingkat opasitas yang diinginkan */
+  z-index: -1;
+  transition: 0.2s;
+}
+
+.about .about-container .about-img:hover::before,
+.about .about-container .about-img:hover::after {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+/* responsive */
+@media screen and (max-width: 1024px) and (min-width: 520px) {
+  .nav .nav-list li a {
+    margin: 0 8px;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .header h1 {
+    font-size: 1rem;
+  }
+
+  .home-content {
+    padding: 0 20px;
+  }
+  .home-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .home-content h3 {
+    font-size: 3rem;
+  }
+
+  .home-content p {
+    font-size: 1.3rem;
+  }
+
+  .about .about-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about .about-container .about-content {
+    margin-bottom: 100px;
+    margin-right: 0;
+  }
+
+  .about .about-container .about-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .about .about-container .about-img img {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .nav .nav-list {
+    display: none;
+  }
+
+  .nav-icon {
+    display: flex;
+  }
+
+  .header h1 {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .home {
+    background-position: top;
+    background-size: 80rem;
+    min-height: 100vh;
+  }
+
+  .home-content {
+    padding: 0 10px;
+  }
+
+  .home-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
+  }
+
+  .about .about-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2.8rem 10px;
+  }
+
+  .about .about-container .about-img img {
+    width: 220px;
+  }
+
+  .about .about-container .about-content h2 {
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about .about-container .about-content p {
+    font-size: 1rem;
+    line-height: normal;
+  }
+
+  .about .about-container .about-content {
+    margin-right: 0;
+    /* padding: 100px; */
+    margin-bottom: 80px;
+  }
+
+  .about {
+    padding: 0;
+  }
+
+  .about .about-container .about-img::before {
+    opacity: 0.5;
+  }
+
+  .about .about-container .about-img::after {
+    opacity: 0.5;
+  }
+}
