@@ -34,42 +34,42 @@
         <ul class="nav-list">
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Cart</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" onclick="cart()">Cart</a></li>
         </ul>
       </nav>
       <nav class="nav-icon" id="nav-icon">
-        <a href="#" class="cart"><i data-feather="shopping-cart"></i></a>
-        <a href="#" id="menu" onclick="openNav()"
-          ><i data-feather="menu"></i
+        <a href="#" class="cart" onclick="cart()"
+          ><i data-feather="shopping-cart"></i
         ></a>
+        <a href="#" onclick="openNav()"><i data-feather="menu"></i></a>
       </nav>
     </header>
     <nav id="nav-side" class="side-nav">
       <ul class="nav-list-side">
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
     <!-- home -->
-    <aection class="home" id="home">
+    <section class="home" id="home">
       <div class="home-content">
         <h2>Selamat Datang Di</h2>
         <h1>Seruput <span>Coffe Shop.</span></h1>
         <p>Nikmati harimu dengan secangkir kopi kami</p>
-        <a href="#">Beli Kopi</a>
+        <a href="#menu">Beli Kopi</a>
       </div>
-    </aection>
+    </section>
 
     <!-- about -->
     <section class="about" id="about">
       <div class="about-container">
         <div class="about-content">
-          <h2>About Us</h2>
+          <h2><span class="span">About</span> Us</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
             harum! Quae distinctio pariatur ducimus praesentium illo sunt rem
@@ -89,9 +89,174 @@
     <!-- menu -->
     <section class="menu" id="menu">
       <div class="menu-container">
-        <h2>Menu Coffe</h2>
+        <h2><span class="span">Menu</span> Coffe</h2>
+        <div class="list-menu">
+          <div class="card" style="width: 18rem">
+            <img
+              src="/assets/img//list coffe/nathan-dumlao-tA90pRfL2gM-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+              width="200px"
+            />
+            <div class="card-body modif2">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">RP. xx</p>
+            </div>
+            <div class="card-body modif">
+              <a href="#" class="card-link buy">Beli</a>
+              <a href="#" class="card-link"
+                ><a href="#" class="cart-item"
+                  ><i data-feather="shopping-cart"></i></a
+              ></a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="/assets/img//list coffe/caleb-_hnL_961xTk-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+              width="200px"
+            />
+            <div class="card-body modif2">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">RP. xx</p>
+            </div>
+            <div class="card-body modif">
+              <a href="#" class="card-link buy">Beli</a>
+              <a href="#" class="card-link"
+                ><a href="#" class="cart-item"
+                  ><i data-feather="shopping-cart"></i></a
+              ></a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="/assets/img//list coffe/drew-coffman-Dt9kdskj6ek-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+              width="200px"
+            />
+            <div class="card-body modif2">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">RP. xx</p>
+            </div>
+            <div class="card-body modif">
+              <a href="#" class="card-link buy">Beli</a>
+              <a href="#" class="card-link"
+                ><a href="#" class="cart-item"
+                  ><i data-feather="shopping-cart"></i></a
+              ></a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="/assets/img//list coffe/nuttawut-anek-vgNU1ujE8Mk-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+              width="200px"
+            />
+            <div class="card-body modif2">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">RP. xx</p>
+            </div>
+            <div class="card-body modif">
+              <a href="#" class="card-link buy">Beli</a>
+              <a href="#" class="card-link"
+                ><a href="#" class="cart-item"
+                  ><i data-feather="shopping-cart"></i></a
+              ></a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="/assets/img//list coffe/robert-euro-djojoseputro-otEky1qweCg-unsplash.jpg"
+              class="card-img-top"
+              alt="..."
+              width="200px"
+            />
+            <div class="card-body modif2">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">RP. xx</p>
+            </div>
+            <div class="card-body modif">
+              <a href="#" class="card-link buy">Beli</a>
+              <a href="#" class="card-link"
+                ><a href="#" class="cart-item"
+                  ><i data-feather="shopping-cart"></i></a
+              ></a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- kontak -->
+    <section class="contact" id="contact">
+      <h2><span class="span">Contact</span> Us</h2>
+      <div class="container">
+        <img
+          src="/assets/img/nathan-dumlao-pMW4jzELQCw-unsplash.jpg"
+          alt=""
+          width="100px"
+        />
+        <form action="">
+          <div class="input">
+            <p><i data-feather="user"></i></p>
+            <input type="text" placeholder="Nama" />
+          </div>
+          <div class="input">
+            <p><i data-feather="phone"></i></p>
+            <input type="text" placeholder="No. HP" />
+          </div>
+          <div class="input">
+            <p><i data-feather="mail"></i></p>
+            <input type="text" placeholder="Pesan" />
+          </div>
+          <button type="submit">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- cart -->
+    <div class="keranjang" id="cart">
+      <div class="container-cart">
+        <h2>Keranjang</h2>
+        <div class="cart-list">
+          <ul id="cart-items"></ul>
+        </div>
+        <p>Total Harga: Rp. <span id="totalPrice">0</span></p>
+        <form id="payment-form" onsubmit="submitPayment(event)">
+          <input
+            type="number"
+            id="amount"
+            step="0.01"
+            required
+            placeholder="Masukan Tunai"
+          />
+          <button type="submit" id="buy-button">Beli</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="element">
+        <ul>
+          <li>
+            <a href="#"><i data-feather="instagram"></i>@aryandrxx</a>
+          </li>
+          <li>
+            <a href="#"><i data-feather="facebook"></i>Arya Val</a>
+          </li>
+          <li>
+            <a href="#"><i data-feather="github"></i>aryndraa </a>
+          </li>
+        </ul>
+      </div>
+      <div class="element">
+        <p>@SeruputCompany</p>
+      </div>
+    </footer>
 
     <!-- Boostrap Script -->
     <script

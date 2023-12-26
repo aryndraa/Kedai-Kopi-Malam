@@ -11,8 +11,11 @@
 body {
   font-family: "Poppins", sans-serif;
   background: #fff;
-  background: #000;
-  min-height: 1000vh;
+  background: #000000;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 .header {
@@ -27,8 +30,22 @@ body {
   right: 0;
   left: 0;
   z-index: 99999;
-  box-shadow: 0px 30px 28px #000;
+  box-shadow: 1px 10px 30px #000000;
   border-bottom: solid var(--primary) 2px;
+  transform: translateY(-500px);
+  opacity: 0;
+  animation: header 1.5s ease forwards;
+}
+
+@keyframes header {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .header h1 {
@@ -60,6 +77,12 @@ body {
   text-decoration: none;
   padding: 0;
   margin: 0 15px;
+  border-bottom: solid 2px #000;
+  transition: 0.2s;
+}
+
+.nav .nav-list li a:hover {
+  color: #874201;
 }
 
 .nav-icon {
@@ -69,6 +92,11 @@ body {
 .nav-icon a {
   margin: 0 5px;
   color: #fff;
+  transition: 0.2s;
+}
+
+.nav-icon a:hover {
+  color: #874201;
 }
 
 .nav-icon a svg {
@@ -106,6 +134,11 @@ body {
   color: #000;
   text-decoration: none;
   font-size: 1rem;
+  transition: 0.2s;
+}
+
+.nav-list-side li a:hover {
+  color: #874201;
 }
 
 /* home */
@@ -123,12 +156,26 @@ body {
 .home-content {
   color: #fff;
   padding: 20px 50px;
+  transform: translateX(-5000px);
+  opacity: 0;
+  animation: home 1.5s ease forwards;
 }
 
 .home-content h2 {
   font-size: 2.8rem;
   text-shadow: -5px 5px 10px #000;
   line-height: 30px;
+}
+
+@keyframes home {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 .home-content h1 {
@@ -154,6 +201,9 @@ body {
   box-shadow: 0 0 10px #000;
 }
 
+.home-content a:hover {
+  background-color: #874201;
+}
 .about {
   padding: 10rem 8% 1.4rem;
 }
@@ -176,6 +226,10 @@ body {
   border-bottom: solid 1px var(--primary);
   width: 400px;
   margin-bottom: 20px;
+}
+
+.span {
+  color: #db710d;
 }
 
 .about .about-container .about-content p {
@@ -228,6 +282,214 @@ body {
   top: 0;
 }
 
+.menu {
+  padding: 6rem 8% 1.4rem;
+}
+
+.menu-container h2 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  font-size: 3.2rem;
+  font-style: italic;
+
+  color: #fff;
+}
+
+.menu-container .list-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.modif {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modif a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a.buy {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 10px;
+  padding: 3px 10px;
+  transition: 0.2s;
+}
+
+a.buy:hover {
+  background-color: #874201;
+}
+
+.modif2 {
+  padding-bottom: 0;
+  padding-top: 10px;
+  margin-left: 0;
+}
+
+.contact {
+  padding: 6rem 4% 8rem;
+}
+
+.contact h2 {
+  font-size: 3.2rem;
+  color: #fff;
+  font-style: italic;
+  text-align: center;
+}
+
+.contact .container {
+  display: flex;
+  margin-top: 2.8rem;
+  /* flex-wrap: wrap; */
+}
+
+.contact .container img {
+  width: 380px;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.contact .container form {
+  flex: 1 1 45rem;
+  padding: 0rem 2rem;
+  text-align: center;
+}
+
+.contact .container form .input {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  padding-left: 2rem;
+}
+
+.contact .container form .input p {
+  color: #dbdbdb;
+}
+
+.contact .container form .input input {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background: none;
+  color: #fff;
+  outline: none;
+}
+
+.contact .container form button {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--primary);
+}
+
+.keranjang {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+}
+
+.container-cart {
+  padding: 20px;
+  padding-top: 6rem;
+}
+
+.keranjang.active {
+  right: 0;
+}
+
+.keranjang h2 {
+  margin-bottom: 10px;
+}
+
+#buy-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-list {
+  max-height: calc(100% - 100px);
+  overflow-y: auto;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#totalPrice {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+#payment-form {
+  margin-top: 20px;
+}
+
+#amount {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cart-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+
+.cart-list::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0000;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+footer li {
+  list-style: none;
+  margin-top: 2px;
+}
+
+footer a {
+  color: #fff;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+footer p {
+  color: #fff;
+}
+
 /* responsive */
 @media screen and (max-width: 1024px) and (min-width: 520px) {
   .nav .nav-list li a {
@@ -271,6 +533,26 @@ body {
 
   .about .about-container .about-img img {
     width: 400px;
+  }
+
+  .menu {
+    padding: 8rem 0 1.4rem;
+  }
+
+  .menu-container .list-menu {
+    gap: 30px;
+  }
+
+  .menu-container h2 {
+    margin-bottom: 5rem;
+  }
+
+  .contact .container {
+    flex-wrap: wrap;
+  }
+
+  .contact .container img {
+    display: none;
   }
 }
 @media screen and (max-width: 520px) {
@@ -321,6 +603,7 @@ body {
 
   .about .about-container .about-img img {
     width: 220px;
+    max-width: 100%;
   }
 
   .about .about-container .about-content h2 {
@@ -341,7 +624,7 @@ body {
   }
 
   .about {
-    padding: 0;
+    padding: 4rem 5% 1.4rem;
   }
 
   .about .about-container .about-img::before {
@@ -350,5 +633,36 @@ body {
 
   .about .about-container .about-img::after {
     opacity: 0.5;
+  }
+
+  .menu {
+    padding: 6rem 8% 1.4rem;
+  }
+
+  .menu-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact .container {
+    flex-wrap: wrap;
+    padding: 0;
+    display: block;
+    flex: none;
+  }
+
+  .contact .container img {
+    display: none;
+  }
+
+  .contact .container form {
+    padding: 0;
+  }
+
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .keranjang {
+    width: 200px;
   }
 }
